@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background:url({{ url_for ('static', filename = 'pic500.jpg') }});
+  background-size:100% 100%;
+}
+
+.right {
+  right: 0;
+  background: url({{ url_for ('static', filename = 'finalpic1.jpg') }});
+ background-size: 100% 100%;
+
+}
+
+.split right
+{
+background:url({{ url_for ('static', filename = 'finalpic1.jpg') }});
+}
+</style>
+</head>
+<body>
+
+<div class="split left">
+  <div class="container">
+        <div id="content" style="margin-top:2em">
+		
+			  
+    <br><br><br>
+    <h2  style="color:white;"> <center>About</center></h2>
+    <p  style="color:white;font-family:Arial">
+Telecommunication, science and practice of transmitting information by electromagnetic means.
+Modern telecommunication centres on the problems involved in transmitting large volumes of information over
+long distances without damaging loss due to noise and interference. The basic components of a modern digital
+telecommunications system must be capable of transmitting voice, data, radio, and television signals. 
+Digital transmission is employed in order to achieve high reliability and because the cost of digital switching 
+systems is much lower than the cost of analog systems. In order to use digital transmission, however, 
+the analog signals that make up most voice, radio, and television communication must be subjected 
+to a process of analog-to-digital conversion.
+
+Churn prediction is customer defection by predicting which customers are likely to cancel a subscription to a service.<br><br>
+Though originally used within the telecommunications industry, it has become common practice across banks, ISPs, insurance firms.
+To analyse customer behaviour,following factors to be analysed
+<br><br>
+Customer demographic data (age, marital status, etc.)
+Sentiment analysis of social media
+Customer usage patterns and geographical usage trends
+Calling-circle data</p>
+  
+</div>
+</div>
+</div>
+
+
+<form action="/login" method="post">
+
+<div class="split right"; style="background: url({{ url_for ('static', filename = 'finalpic1.jpg') }}) ;background-size:100% 100%; ">
+  
+    <center>
+    <h2>Telecom Churn Prediction</h2>
+    <p>&nbsp</p>
+<h1 style="color:#F5F5F5;font-size=150% "><i>Details Required</i></h1> 
+<font size="5" 
+          font-family: "Times New Roman","bold";
+          color="white"> 
+<p style="text-align:center;">
+
+<b>Credit Score:</b><input type="number" name="cs"><br><br>
+<label for="Geography"><b>Geography</b></label>
+<select name="s">
+<option values="--Select--">---                    Select                     ---</option>
+<option values="France">France</option>
+<option values="Germany">Germany</option>
+<option values="Spain">Spain</option>
+</select>
+<br>
+<br>
+			
+<b>Age:</b><input type="number" name="age"><br><br>
+<td><b>Gender:</b></td>
+
+<input type="radio"  name="g" value="Male" />  
+<lable for="Male"><b>Male</b></label>
+<input type="radio" name="g" value="Female" />
+<b>Female</b>
+
+<br><br>
+<b>Tenure:</b><input type="number" name="t"><br><br>
+<b>Balance:</b><input type="number" name="b"><br><br>
+<b>No.of Products:<b/><input type="number" name="p"><br><br>
+<tr>
+<td><b>Do you have a Credit Card:</b> </td>
+<td>
+<input type="radio" name="c" value="Yes" />
+Yes
+<input type="radio" name="c" value="No" />
+No
+</td>
+</tr>
+<br><br>
+<tr>
+<td><b>Are you an Active Member:</b> </td>
+<td>
+<input type="radio" name="ac" value="Yes" />
+Yes
+<input type="radio" name="ac" value="No" />
+No
+</td>
+</tr>
+<br><br>
+<b>Estimated Salary:</b><input type="number" name="sal"><br>
+</font>
+</p>
+<tr>
+<td colspan="4" align="center"><input type="submit" value="Submit"/>
+<input type="reset" value="Reset Data"/>
+</td>
+</tr>
+</form>
+</center>
+<style>
+form{padding:20px;
+text-align : center;
+font-size : 20px;}
+Gender {width : 100px;
+height : 30px;
+fontsize : 20px;}
+
+input[type=submit]
+{
+width:20%;
+cursor:pointer;
+font-size:20px;
+font-weight:bold;
+}
+select{
+padding:10px;
+width:15%;
+border-radius:5px;
+}
+input[type=reset]
+{
+width:20%;
+cursor:pointer;
+font-size:20px;
+font-weight:bold;
+}
+</style>
+  </center>
+  <font size="6" 
+          font-family: "Times New Roman","bold";
+          color="white"> 
+<p>{{y}}</p>
+</div>
+     
+</body>
+</html> 
